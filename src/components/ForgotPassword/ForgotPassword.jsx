@@ -16,37 +16,43 @@ export default function ForgotPassword({ setShowForgotPassword }) {
     e.preventDefault();
     setIsLoading(true);
     setMessage("");
-  
+
     try {
       const response = await axios.post(
         "https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords",
         { email }
       );
-  
+
       console.log(response.data);
-  
+
       if (response.data.statusMsg === "success") {
         toast.success("Reset code sent to your email.");
         localStorage.setItem("resetEmail", email);
-        
+
         setTimeout(() => {
           setShowForgotPassword(false);
-          navigate("/verify-reset-code"); 
+          navigate("/verify-reset-code");
         }, 1500);
       } else {
         setMessage("Unexpected response from the server.");
         toast.error("Unexpected response from the server.");
       }
-      
     } catch (error) {
       console.error(error);
-      const errorMessage = error.response?.data?.message || "Something went wrong.";
+
+      // ✅ هنا نضيف رسالة واضحة لو الإيميل مش مسجل
+      let errorMessage = error.response?.data?.message || "Something went wrong.";
+      if (error.response?.status === 404) {
+        errorMessage = "❌ This email is not registered.";
+      }
+
       setMessage(errorMessage);
       toast.error(errorMessage);
     } finally {
       setIsLoading(false);
     }
   }
+
   
 
   if (showVerifyCode) {

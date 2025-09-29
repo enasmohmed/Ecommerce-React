@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import * as Yup from "yup";
 import { authContext } from '../../Context/AuthContextProvider';
 import { Helmet } from 'react-helmet';
+import { Link } from "react-router-dom";
 
 export default function Register() {
   let {setToken} = useContext(authContext)
@@ -101,7 +102,7 @@ export default function Register() {
         <title>Register</title>
       </Helmet>
 
-  <div className='container mx-auto'>
+  <div className='container mx-auto mt-20'>
     {errorMessage != null ? <div class="p-4 mb-4 text-sm text-center text-red-900 rounded-lg bg-red-50 dark:bg-red-100 dark:text-red-900" role="alert">
       <span class="font-medium">{errorMessage}</span> 
     </div> : null }

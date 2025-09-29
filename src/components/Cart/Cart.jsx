@@ -5,12 +5,14 @@ import { cartContext } from '../../Context/CartContextProvider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 export default function Cart() {
   let { getCart ,clearCart , updateQuantityCart , removeItem , isLoading , numOfCartItems , totalCartPrice , productsCart } = useContext(cartContext)
 
+  const navigate = useNavigate();
+  
   async function removeItemCart(productId) {
     let flag = await removeItem(productId);
     if(flag){
@@ -36,7 +38,7 @@ export default function Cart() {
   const handlePayment = () => {
     // استدعاء API الدفع أو الانتقال إلى صفحة الدفع
     console.log("Redirecting to payment...");
-    window.location.href = "/payment"; // توجيه المستخدم يدويًا
+    navigate("/payment");
   };
   
 

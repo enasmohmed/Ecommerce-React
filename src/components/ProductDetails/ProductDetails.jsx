@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Style from './ProductDetails.module.css'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { Circles } from 'react-loader-spinner'
 import { Helmet } from 'react-helmet'
+import { cartContext } from '../../Context/CartContextProvider'
 
 
 export default function ProductDetails() {
@@ -15,7 +16,19 @@ export default function ProductDetails() {
   const [product, setProduct] = useState(null)
   const [relatedProducts, setRelatedProducts] = useState(null)
   const [error, setError] = useState(null)
+  const { addToCart } = useContext(cartContext);
 
+
+
+  async function addProductToCart(id) {
+    let result = await addToCart(id);
+    console.log("Result from addToCart:", result);
+    if (result.data) {
+      toast.success("Product added to cart successfully!");
+    } else {
+      toast.error("Error adding product to cart. Please try again later.");
+    }
+  }
 
   async function getProducts(){
     let res = await axios.get("https://ecommerce.routemisr.com/api/v1/products")
@@ -52,6 +65,7 @@ export default function ProductDetails() {
   if(error){
     return <div className='text-center text-red-500'>Error: {error}</div>
   }
+  
 
   return <>
 
@@ -87,7 +101,12 @@ export default function ProductDetails() {
                 </span>
               </div>
     
-              <button className="mt-4 w-full py-2 text-white bg-green-500 hover:bg-green-600 transition-all rounded-md font-semibold">
+              <button
+              onClick={(e) => {
+                e.preventDefault();
+                addProductToCart(product._id);
+              }}
+              className="mt-4 w-full py-2 text-white bg-green-500 hover:bg-green-600 transition-all rounded-md font-semibold">
                 Add To Cart
               </button>
             </div>
@@ -104,6 +123,7 @@ export default function ProductDetails() {
 
       {/* المنتجات ذات الصلة */}
       <div className="container mx-auto px-4 mt-5">
+        <h2 className='text-[20px] font-semibold text-center my-6'>Related Products</h2>
         {relatedProducts ? (
           <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             {relatedProducts.map((product) => (
@@ -134,7 +154,12 @@ export default function ProductDetails() {
                   )}
                 </Link>
 
-                <button className="mt-3 w-full py-2 text-white bg-green-500 hover:bg-green-600 transition-all rounded-md font-semibold">
+                <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  addProductToCart(product._id);
+                }}
+                className="mt-3 w-full py-2 text-white bg-green-500 hover:bg-green-600 transition-all rounded-md font-semibold">
                   Add To Cart
                 </button>
               </div>

@@ -25,13 +25,23 @@ export default function ResetPassword() {
     e.preventDefault();
     setIsLoading(true);
 
+    // ✅ تحقق من مطابقة الباسوردات
     if (password !== confirmPassword) {
       toast.error("Passwords do not match!");
       setIsLoading(false);
       return;
     }
 
+    // ✅ تحقق من قواعد الباسورد
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+    if (!passwordRegex.test(password)) {
+      toast.error("Password must be at least 8 chars, include upper, lower, number & special char.");
+      setIsLoading(false);
+      return;
+    }
+
     try {
+      // ✅ إرسال الطلب
       await axios.put(
         "https://ecommerce.routemisr.com/api/v1/auth/resetPassword",
         { email, newPassword: password }
@@ -41,11 +51,18 @@ export default function ResetPassword() {
       localStorage.removeItem("resetEmail");
       setTimeout(() => navigate("/login"), 2000);
     } catch (error) {
-      toast.error(error.response?.data?.message || "Something went wrong.");
+      // ✅ معالجة إن كان الإيميل مش موجود أو حصل error من السيرفر
+      if (error.response?.status === 404) {
+        toast.error("This email is not registered.");
+        navigate("/register");
+      } else {
+        toast.error(error.response?.data?.message || "Something went wrong.");
+      }
     } finally {
       setIsLoading(false);
     }
   }
+
 
   return <>
       <Helmet>

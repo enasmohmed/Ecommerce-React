@@ -74,8 +74,8 @@ export default function Login() {
 
   let formikLogin = useFormik({
     initialValues: {
-      email: '',
-      password: '', 
+      email: 'test@shop.com',
+      password: 'A1234567', 
     },
 
     validationSchema,
@@ -92,7 +92,7 @@ export default function Login() {
         <title>Login</title>
       </Helmet>
 
-  <div className='container mx-auto'>
+  <div className='container mx-auto mt-20'>
     {errorMessage != null ? <div class="p-4 mb-4 text-sm text-center text-red-900 rounded-lg bg-red-50 dark:bg-red-100 dark:text-red-900" role="alert">
       <span class="font-medium">{errorMessage}</span> 
     </div> : null }
