@@ -81,11 +81,11 @@
 
 ### 🖼️ Login Page
 
-    ![Login Screenshot](/screenshots/login.png)
+    ![Login Screenshot](./screenshots/login.png)
 
 ### 🖼️ Home Page
 
-    ![Home Screenshot](screenshots/home.png)
+    ![Home Screenshot](./screenshots/home.png)
     
     
 
