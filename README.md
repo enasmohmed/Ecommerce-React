@@ -85,8 +85,7 @@
 
 ### 🖼️ Home Page
 
-      ![Home Screenshot]([./screenshots/home.png](https://raw.githubusercontent.com/enasmohmed/Ecommerce-React/d7cf3360728dba5938c15b1a8e8670dd051ef071/screenshots/home.png
-))
+      ![Home Screenshot](<img width="1845" height="8385" alt="Image" src="https://github.com/user-attachments/assets/f37dc668-940b-46ec-b514-72b12d8fe4f1" />)
     
     
 
