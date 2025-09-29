@@ -85,7 +85,8 @@
 
 ### 🖼️ Home Page
 
-    ![Home Screenshot](./screenshots/home.png)
+    ![Home Screenshot](screenshots/home.png)
+    
 
 ### 🖼️ All Products
 
