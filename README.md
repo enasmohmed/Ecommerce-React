@@ -85,7 +85,7 @@
 
 ### 🖼️ Home Page
 
-    ![Home Screenshot](https://github.com/enasmohmed/Ecommerce-React/blob/d7cf3360728dba5938c15b1a8e8670dd051ef071/screenshots/home.png)
+    ![Home Screenshot](screenshots/home.png)
     
     
 
