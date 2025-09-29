@@ -78,38 +78,31 @@
 
 ### 🖼️ Login Page
 
-    ![Login Screenshot](./screenshots/login.png)
-   <img width="800"  alt="Image" src="screenshots/login.png" />
+![Login Screenshot](./screenshots/login.png)
 
 ### 🖼️ Home Page
 
-    ![Home Screenshot](screenshots/home.png)
-   <img width="800"  alt="Image" src="screenshots/home.png" />
+![Home Screenshot](screenshots/home.png)
 
 ### 🖼️ All Products
 
-    ![All Product Screenshot](./screenshots/product.png)
-   <img width="800"  alt="Image" src="screenshots/product.png" />
+![All Product Screenshot](./screenshots/product.png)
 
 ### 🖼️ Cart
 
-    ![Cart Screenshot](./screenshots/cart.png)
-   <img width="800"  alt="Image" src="screenshots/cart.png" />
+![Cart Screenshot](./screenshots/cart.png)
 
 ### 🖼️ Product Details
 
-    ![Product Details Screenshot](./screenshots/product-details.png)
-   <img width="800"  alt="Image" src="screenshots/product-details.png" />
+![Product Details Screenshot](./screenshots/product-details.png)
 
 ### 🖼️ All Categories
 
-    ![All Categories Screenshot](./screenshots/categories.png)
-   <img width="800"  alt="Image" src="screenshots/categories.png" />
+![All Categories Screenshot](./screenshots/categories.png)
 
 ### 🖼️ All Brands
 
-    ![All Brands Screenshot](./screenshots/brands.png)
-   <img width="800"  alt="Image" src="screenshots/brands.png" />
+![All Brands Screenshot](./screenshots/brands.png)
 
 📄 License
 
