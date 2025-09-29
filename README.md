@@ -34,19 +34,19 @@
 
 2. ادخل على فولدر المشروع:
 
-    ```bash
+   ```bash
    cd Ecommerce-React
    ```
 
 3. نزّل الـ dependencies:
 
-    ```bash
+   ```bash
    npm install
    ```
 
 4. شغّل المشروع:
 
-    ```bash
+   ```bash
    npm run dev
    ```
 
@@ -74,43 +74,42 @@
         │── App.jsx           # Root Component
         │── main.jsx          # Entry Point
 
-
-
-
 ## 📸 Screenshots
 
 ### 🖼️ Login Page
 
     ![Login Screenshot](./screenshots/login.png)
+    <img width="800"  alt="Image" src="screenshots/login.png" />
 
 ### 🖼️ Home Page
 
-      ![Home Screenshot](<img width="1845" height="8385" alt="Image" src="https://github.com/user-attachments/assets/f37dc668-940b-46ec-b514-72b12d8fe4f1" />)
-    
-    
+    ![Home Screenshot](screenshots/home.png)
+    <img width="800"  alt="Image" src="screenshots/home.png" />
 
 ### 🖼️ All Products
 
     ![All Product Screenshot](./screenshots/product.png)
+    <img width="800"  alt="Image" src="screenshots/product.png" />
 
 ### 🖼️ Cart
 
     ![Cart Screenshot](./screenshots/cart.png)
+    <img width="800"  alt="Image" src="screenshots/cart.png" />
 
 ### 🖼️ Product Details
 
     ![Product Details Screenshot](./screenshots/product-details.png)
+    <img width="800"  alt="Image" src="screenshots/product-details.png" />
 
 ### 🖼️ All Categories
 
-    ![All Categories Screenshot](screenshots/categories.png)
+    ![All Categories Screenshot](./screenshots/categories.png)
+    <img width="800"  alt="Image" src="screenshots/categories.png" />
 
 ### 🖼️ All Brands
 
     ![All Brands Screenshot](./screenshots/brands.png)
-
-
-
+    <img width="800"  alt="Image" src="screenshots/brands.png" />
 
 📄 License
 
