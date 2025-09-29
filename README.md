@@ -103,7 +103,7 @@
 
 ### 🖼️ All Categories
 
-    ![All Categories Screenshot](./screenshots/categories.png)
+    ![All Categories Screenshot](screenshots/categories.png)
 
 ### 🖼️ All Brands
 
