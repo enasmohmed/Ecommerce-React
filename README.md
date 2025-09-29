@@ -34,15 +34,21 @@
 
 2. ادخل على فولدر المشروع:
 
+    ```bash
    cd Ecommerce-React
+   ```
 
 3. نزّل الـ dependencies:
 
+    ```bash
    npm install
+   ```
 
 4. شغّل المشروع:
 
+    ```bash
    npm run dev
+   ```
 
 🛠️ Technologies Used
 
@@ -75,31 +81,31 @@
 
 ### 🖼️ Login Page
 
-    ![Login Screenshot](/screenshots/login.png)
+    ![Login Screenshot](./screenshots/login.png)
 
 ### 🖼️ Home Page
 
-    ![Home Screenshot](/screenshots/home.png)
+    ![Home Screenshot](./screenshots/home.png)
 
 ### 🖼️ All Products
 
-    ![All Product Screenshot](/screenshots/product.png)
+    ![All Product Screenshot](./screenshots/product.png)
 
 ### 🖼️ Cart
 
-    ![Cart Screenshot](/screenshots/cart.png)
+    ![Cart Screenshot](./screenshots/cart.png)
 
 ### 🖼️ Product Details
 
-    ![Product Details Screenshot](/screenshots/product-details.png)
+    ![Product Details Screenshot](./screenshots/product-details.png)
 
 ### 🖼️ All Categories
 
-    ![All Categories Screenshot](/screenshots/categories.png)
+    ![All Categories Screenshot](./screenshots/categories.png)
 
 ### 🖼️ All Brands
 
-    ![All Brands Screenshot](/screenshots/brands.png)
+    ![All Brands Screenshot](./screenshots/brands.png)
 
 
 
@@ -107,11 +113,3 @@
 📄 License
 
     هذا المشروع للتعلم والعرض فقط – مفتوح المصدر ويمكنك التعديل عليه بحرية.
-
-
-    ---
-
-    ✨ كده عندك README متكامل واحترافي، ينفع للـ GitHub والـ Portfolio.
-    ممكن كمان تضيفي **صور للشاشات (Screenshots)** في قسم خاص علشان يبقى شكله أحلى.
-
-    تحبي أوريكي إزاي تضيفي صور في README بحيث تظهر من داخل مشروعك؟
