@@ -81,7 +81,7 @@
 
 ### 🖼️ Login Page
 
-    ![Login Screenshot](./screenshots/login.png)
+    ![Login Screenshot](/screenshots/login.png)
 
 ### 🖼️ Home Page
 
